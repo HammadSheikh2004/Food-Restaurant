@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Mochiy+Pop+P+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap');
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    transition: .2s linear;
+    text-transform: capitalize;
+}
+
+:root {
+    --dark-color: #2f0872;
+    --main-color: #1363DF;
+    --light-color: #47B5FF;
+    --white-color: #ffffff;
+    --red-color: #E01A11;
+    --black-color: #000000;
+    --light-black-color: #666;
+    --box-shadow: 0 0.5rem 1rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    color: var(--red-color);
+    background-color: var(--light-color);
+    border-radius: 0.67rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+.btn i {
+    margin-left: 1.5rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.heading span {
+    color: var(--red-color);
+}
+
+::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--white-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 70%;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header.active {
+    background-color: var(--main-color);
+    box-shadow: var(--box-shadow);
+}
+
+.header .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1.5rem 2rem;
+}
+
+.header .flex .logo img {
+    height: 4.678rem;
+}
+
+.header .flex .navbar a {
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    color: var(--red-color);
+    text-decoration: none;
+}
+
+.header .flex .navbar a:hover {
+    border-bottom: 0.2rem solid var(--white-color);
+    padding-top: 0.56rem;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 0.67rem 0.69rem;
+}
+
+#menu-btn {
+    display: none;
+    font-size: 2.5rem;
+    color: var(--light-black-color);
+    cursor: pointer;
+}
+
+/* css for home section */
+.home-bg {
+    background: url(../img/home-1-img.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-bg .home{
+   min-height: 60rem;
+    display: flex;
+    align-items: center;
+}
+
+.home .content {
+    width: 50rem;
+    align-items: center;
+}
+
+.home .content h3 {
+    font-size: 3.587rem;
+    font-weight: 700;
+    color: var(--light-color);
+}
+
+.home .content h3 span {
+    color: var(--red-color);
+}
+
+.home .content p {
+    font-size: 2.989rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+/* css for menu section */
+.menu .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu .box-container .box img {
+    height: 7rem;
+    width: 7rem;
+    object-fit: cover;
+}
+
+.menu .box-container .box h3 {
+    margin-top: 1rem;
+    color: var(--light-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* css for about section */
+.about-bg {
+    background-color: var(--dark-color);
+}
+
+.about {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.about .content p {
+    color: var(--light-color);
+    font-size: 1.4rem;
+    line-height: 2;
+}
+
+/* css for explore food */
+.explore-food .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.explore-food .box .btn {
+    width: 100%;
+    margin-bottom: 0.6rem;
+}
+
+.explore-food .box:hover {
+    transform: translateY(-2rem);
+    box-shadow: var(--box-shadow);
+    padding: 0 0.679rem;
+}
+
+.explore-food .box img:hover {
+    margin-top: 1rem;
+}
+
+.explore-food .box h5 {
+    font-size: 2rem;
+    color: var(--red-color);
+    margin-top: 0.9rem;
+}
+
+.explore-food .box h5 span {
+    font-size: 1.6rem;
+    text-decoration: line-through;
+}
+
+/* css for review section */
+.review .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.review .box-container .box .content h5 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.review .box-container .box .content span {
+    font-size: 1.5rem;
+    color: var(--light-color);
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+/* css for contact section */
+.contact{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
+.contact form .box{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem 0.9rem;
+    font-size: 1.4rem;
+    color: var(--main-color);
+    border: 0.2rem solid var(--main-color);
+    border-radius: 0.3rem;
+}
+
+.contact form .btn{
+    border: none;
+    cursor: pointer;
+}
+
+/* css for footer section */
+
+
+footer{
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background: var(--light-color);
+  }
+  footer .content{
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer .content p,a{
+    color: var(--white-color);
+  }
+  footer .content .box{
+    width: 33%;
+    transition: all 0.4s ease;
+  }
+  footer .content .topic{
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white-color);
+    margin-bottom: 16px;
+  
+  }
+  footer .content p{
+    text-align: justify;
+  }
+  footer .content .lower .topic{
+    margin: 24px 0 5px 0;
+  }
+  footer .content .lower i{
+    padding-right: 16px;
+  }
+  footer .content .middle{
+    padding-left: 80px;
+  }
+  footer .content .middle a{
+    line-height: 32px;
+  }
+  footer .content .right input[type="text"]{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: var(--black-color);
+    background: var(--dark-color);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 17px;
+    border: 2px solid #222222;
+  }
+  footer .content .right input[type="submit"]{
+    height: 42px;
+    width: 100%;
+    font-size: 18px;
+    color: #d9d9d9;
+    background: var(--red-color);
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid var(--red-color);
+    transition: all 0.3s ease-in-out;
+  }
+  .content .right input[type="submit"]:hover{
+    background: none;
+    color:  var(--red-color);
+  }
+  footer .content .media-icons a{
+    font-size: 16px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+    border: 2px solid #222222;
+    margin: 30px 5px 0 0;
+    transition: all 0.3s ease;
+  }
+  .content .media-icons a:hover{
+    border-color: var(--red-color);
+  }
+  footer .bottom{
+    width: 100%;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 0 40px 5px 0;
+  }
+
+  footer .bottom p{
+    font-size: 1.5rem;
+  }
+
+  footer .bottom a{
+    color: var(--red-color);
+    font-size: 2rem;
+  }
+  footer a{
+    transition: all 0.3s ease;
+  }
+  footer a:hover{
+    color: var(--red-color);
+  }
+  
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width:1024px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .about .image img {
+        width: 100%;
+    }
+
+    .about .content p {
+        text-align: center;
+    }
+
+    
+
+}
+
+@media screen and (max-width:991px) {
+    html {
+        font-size: 75%;
+    }
+
+    .contact{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .contact .image img{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+    #menu-btn {
+        display: inline-block;
+        transition: .2s linear;
+    }
+
+    #menu-btn.fa-times {
+        transform: rotate(180deg);
+    }
+
+    .header {
+        background-color: var(--white-color);
+        z-index: 1;
+
+    }
+
+    .header .flex .navbar {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background-color: var(--white-color);
+        border-top: .2rem solid var(--light-black-color);
+        border-bottom: .2rem solid var(--light-black-color);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .2s linear;
+    }
+
+    .header .flex .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    .header .flex .navbar a {
+        display: block;
+        margin: 2rem;
+    }
+
+    .menu .box-container .box h3 {
+       display: none;
+    }
+}
+
+@media screen and (max-width:450px) {
+    html {
+        font-size: 70%;
+    }
+
+    .explore-food .box .btn {
+        width: 100%;
+        margin-bottom: 0.6rem;
+        width: 50%;
+    }
+
+    .explore-food .box {
+        margin-right: 2.2rem;
+
+    }
+}
+
+@media (max-width:1100px) {
+    footer .content .middle{
+      padding-left: 50px;
+    }
+  }
+  @media (max-width:950px){
+    footer .content .box{
+      width: 50%;
+    }
+    .content .right{
+      margin-top: 40px;
+    }
+  }
+  @media (max-width:560px){
+    footer{
+      position: relative;
+    }
+    footer .content .box{
+      width: 100%;
+      margin-top: 30px;
+    }
+    footer .content .middle{
+      padding-left: 0;
+    }
+  }
+  
+
+
